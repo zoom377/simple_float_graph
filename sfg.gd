@@ -1,13 +1,14 @@
-extends Node
+extends CanvasLayer
 
-const GRAPH_CONTAINER = preload("res://addons/simplefloatgraph/UI/GraphContainer.tscn")
-const FLOAT_GRAPH := preload("res://addons/simplefloatgraph/UI/FloatGraph.tscn")
+const GRAPH_CONTAINER = preload("res://addons/simple_float_graph/UI/GraphContainer.tscn")
+const FLOAT_GRAPH := preload("res://addons/simple_float_graph/UI/FloatGraph.tscn")
 
 var _tracked_floats: Array[FloatContext] = []
 
 var _vbox: Container
 
 func _enter_tree() -> void:
+	layer = 1000
 	var cont := GRAPH_CONTAINER.instantiate()
 	add_child(cont)
 	_vbox = cont.get_child(0)

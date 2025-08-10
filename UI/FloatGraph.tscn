@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://jk11ypoycf2d"]
 
-[ext_resource type="Script" uid="uid://brbbvpr8q1uno" path="res://addons/simplefloatgraph/float_graph.gd" id="1_c184e"]
+[ext_resource type="Script" uid="uid://brbbvpr8q1uno" path="res://addons/simple_float_graph/float_graph.gd" id="1_c184e"]
 
 [node name="FloatGraph" type="MarginContainer"]
 anchors_preset = 15
@@ -10,13 +10,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 theme_override_constants/margin_left = 5
 script = ExtResource("1_c184e")
-timespan = 2.0
+timespan = 10.0
 smooth = 10.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Max" type="RichTextLabel" parent="Control"]
 layout_mode = 1
@@ -66,7 +68,9 @@ horizontal_alignment = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
+mouse_filter = 2
 theme_override_constants/margin_top = 1
 
 [node name="GraphCurve" type="Control" parent="MarginContainer"]
 layout_mode = 2
+mouse_filter = 2

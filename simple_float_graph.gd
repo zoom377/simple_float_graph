@@ -5,7 +5,7 @@ const singleton_script_name := "SFG"
 
 
 func _enter_tree() -> void:
-	add_autoload_singleton(singleton_script_name, "res://addons/simplefloatgraph/sfg.gd")
+	add_autoload_singleton(singleton_script_name, "res://addons/simple_float_graph/sfg.gd")
 	pass
 
 
