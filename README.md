@@ -1,4 +1,4 @@
-A simple and performant graph tool for monitoring float values. Can be useful for debugging physics amongst other things.
+A simple and performant graph tool for monitoring float values in the Godot game engine. Can be useful for diagnosing physics issues amongst other things.
 
 ## Usage
 Call `SFG.start_tracking(selector: Callable)` once in your `_ready()` function to create a graph and begin tracking a float value.
