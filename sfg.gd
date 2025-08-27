@@ -20,9 +20,7 @@ func _enter_tree() -> void:
 ## Selector should be a function that returns the current float value.
 ## Call earliest in _ready().
 func start_tracking(selector: Callable, title: String = "", color: Color = Color.RED, sample_mode: SampleMode = SampleMode.PROCESS) -> FloatGraph:
-	var new_graph := create_graph()
-	new_graph.color = color
-	new_graph.title = title
+	var new_graph := create_graph(title, color)
 	
 	var context := FloatContext.new()
 	context.graph_control = new_graph
@@ -36,9 +34,11 @@ func start_tracking(selector: Callable, title: String = "", color: Color = Color
 
 
 ## Create a graph to which data can be manually added using FloatGraph.add(value)
-func create_graph() -> FloatGraph:
+func create_graph(title: String = "", color: Color = Color.RED) -> FloatGraph:
 	var new_graph := FLOAT_GRAPH.instantiate() as FloatGraph
 	_vbox.add_child(new_graph)
+	new_graph.color = color
+	new_graph.title = title
 	return new_graph
 
 
