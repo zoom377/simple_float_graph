@@ -17,7 +17,8 @@ func _enter_tree() -> void:
 
 
 ## Begins to automatically record the float value every frame and display on graph.
-## selector should be a function that returns the current float value.
+## Selector should be a function that returns the current float value.
+## Call earliest in _ready().
 func start_tracking(selector: Callable, title: String = "", color: Color = Color.RED, sample_mode: SampleMode = SampleMode.PROCESS) -> FloatGraph:
 	var new_graph := create_graph()
 	new_graph.color = color
